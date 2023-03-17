@@ -65,8 +65,8 @@
     margin: 5px;
 }
 
-.cut-text {
-    text-decoration: line-through;
+.dim-text {
+    color: lightgrey;
 }
 
 

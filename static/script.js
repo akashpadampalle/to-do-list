@@ -22,7 +22,7 @@ function renderList(todoArray){
 
         // if status of item is 1(checked) then cut the text using cut-text css class
         if(todoArray[i].status == 1){
-            element.classList.add('cut-text');
+            element.classList.add('dim-text');
         }
 
         // creating todo-item using template and populating data fetched from server
