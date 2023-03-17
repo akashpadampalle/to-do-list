@@ -9,7 +9,12 @@ const todoSchema = new mongoose.Schema({
         type : Date,
         required : true
     },
-    condition : {
+    category: {
+        type : String,
+        Enumerator : ['work', 'school', 'personal', 'study'],
+        default : 'personal'
+    },
+    status : {
         type : Number,
         Enumerator : [1, 0],
         default : 0
@@ -20,6 +25,6 @@ const todoSchema = new mongoose.Schema({
 });
 
 
-const todoModel = mongoose.model('todoModel', todoSchema);
+const todoModel = mongoose.model('todo', todoSchema);
 
 module.exports = todoModel;

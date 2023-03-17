@@ -5,7 +5,10 @@ const db = require('./config/connectiondb');
 const todoModel = require('./modals/todolistdb');
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded());
 
+app.use('/', require('./routes/index'));
 
 
 try{
