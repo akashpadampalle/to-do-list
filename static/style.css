@@ -1,0 +1,83 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* create todo list form styling */
+
+#create-todo-form{
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#create-todo-form > * {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+#create-todo-btn{
+    background: lightgreen;
+}
+
+
+
+/* TODO List styling */
+
+.todo-item{
+    display: flex;
+    align-items: center;
+    background: lightcyan;
+    width: 70vw;
+    min-width: 400px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.todo-item-details{
+    flex-grow: 1;
+    padding: 10 px;
+    display: flex;
+    align-items: center;
+}
+
+.todo-item-details > * {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.todo-item-title {
+    flex-grow: 1;
+}
+
+.todo-item-delete {
+    padding: 10px;
+    text-align: center;
+    background: lightcoral;
+}
+
+.todo-item-category{
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.cut-text {
+    text-decoration: line-through;
+}
+
+
+
+/* change color according to the category */
+
+.category-school{background: orange;}
+.category-work{background: lightgreen;}
+.category-study{background: lightblue;}
+.category-personal{background: lightcoral;}
+
+
+
+

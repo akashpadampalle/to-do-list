@@ -1,5 +1,8 @@
+// including mongoose library 
 const mongoose = require('mongoose');
 
+
+// creating schema of todo-item include is title, date, category, status
 const todoSchema = new mongoose.Schema({
     title : {
         type : String,
@@ -11,7 +14,6 @@ const todoSchema = new mongoose.Schema({
     },
     category: {
         type : String,
-        Enumerator : ['work', 'school', 'personal', 'study'],
         default : 'personal'
     },
     status : {
@@ -24,7 +26,6 @@ const todoSchema = new mongoose.Schema({
     timestamps: true
 });
 
-
+// creating model using todoSchema and exporting it
 const todoModel = mongoose.model('todo', todoSchema);
-
 module.exports = todoModel;

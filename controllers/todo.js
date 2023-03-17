@@ -1,6 +1,16 @@
+//including db and model to manipulate database
 const db = require('../config/connectiondb');
 const todoModel = require('../modals/todolistdb');
 
+
+// returns home page
+module.exports.homePage = function(req, res){
+    try{
+        res.render('home');
+    }catch{
+        res.end('<h1>Unable to lead homepage</h1>')
+    }
+}
 
 
 module.exports.getTodos = function(req, res){
@@ -23,12 +33,12 @@ module.exports.createTodo = async function(req, res){
     try{
         const {title, date, category} = req.body;
 
-        todoModel.create({
+        await todoModel.create({
             "title" : title,
             "date" : new Date(date),
             "category" : category
-        }).then((data) => res.json(data));
-        
+        })
+        res.redirect('back');
     }catch(error){
         console.log(error);
         res.json({
@@ -74,4 +84,10 @@ module.exports.changeStatus = function(req, res){
             message : "unable to change the status" 
         });
     }
+}
+
+// sending nothing file as a response
+module.exports.nothing = function (req, res){
+    try{res.render('nothing');}
+    catch(err){res.end("<h1>nothing is here</h1>");}
 }

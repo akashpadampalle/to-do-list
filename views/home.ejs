@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> TODO - APP </title>
+        <script src="https://kit.fontawesome.com/b772503b05.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- form to create Todo item -->
+        <form id="create-todo-form" action="/create" method="post">
+            <input type="text" name="title" required placeholder="Enter Title of TODO">
+            <input type="date" name="date" required>
+            <select name="category" >
+                <option value="personal" >personal</option>
+                <option value="work" selected>work</option>
+                <option value="study">study</option>
+                <option value="school">school</option>
+            </select>
+            <input type="submit" value="create" id="create-todo-btn">
+        </form>
+
+
+        <!-- todo list to show the todo item genereted from js script -->
+        <div id="todo-list">
+
+            <!-- <div class="todo-item">
+                <div class="todo-item-details">
+                    <i class="fa-sharp fa-regular fa-square-check todo-item-checkbox"></i>
+                    <span class="todo-iten-date">2024-12-24</span>
+                    <span class="todo-item-category category-personal"> personal </span>
+                    <span class="todo-item-title">Lorem ipsum dolor </span>
+                </div>
+                <i class="fa-solid fa-trash todo-item-delete"></i>
+            </div> -->
+            
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
